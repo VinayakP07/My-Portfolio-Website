@@ -1,0 +1,52 @@
+.projectCardBox{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    border-radius: 0.8rem;
+    border-color: white;
+    border-width:0.2rem ;
+    background-color: rgba(194, 186, 186, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.projectCardBox img{
+    width: 20rem;
+    height: 100%;
+    object-fit: fill;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    border-right: white 0.2rem solid;
+}
+
+.projectCardContent{
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    color: white;
+}
+
+.projectCardContent h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.projectCardContent p{
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.cardButton{
+    display: flex;
+    gap: 3rem;
+}
+
+.cardButton button{
+    background-color: rgba(21, 139, 236, 0.873);
+    backdrop-filter: blur(5px);
+    width: 17rem;
+    height: 1.8rem;
+    border-radius: 2rem;
+    font-weight: 700;
+}

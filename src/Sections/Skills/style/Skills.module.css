@@ -1,0 +1,167 @@
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.skillBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.skillBox h1{
+    color: white;
+    font-size: 4rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5rem;
+}
+
+.imageBox{
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+    border-radius: 0.8rem;
+    border-color: white;
+    border-width:0.1rem ;
+    background-color: rgba(194, 186, 186, 0.2); /* More transparent background color */
+    backdrop-filter: blur(5px); /* Adds a blur effect */
+    animation: float 2s ease-in-out infinite;
+}
+
+.imageBox p{
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.imageBox:hover{
+    cursor: pointer;
+}
+
+.skillImages{
+    display: flex;
+    margin-top: 8rem;
+    padding: 0rem 5rem;
+    justify-content: center;
+    gap: 10rem;
+    row-gap: 10rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.mongoLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.expressLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.cLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.htmlLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.reactLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.nodeLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.cssLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.jsLogo{
+    width: 5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+.javaLogo{
+    width: 3.5rem;
+    height: 5rem;
+    /* animation: float 2s ease-in-out infinite; */
+}
+
+@media (max-width: 1024px) {
+    .skillImages {
+        gap: 5rem;
+    }
+    .imageBox {
+        width: 6rem;
+        height: 8rem;
+    }
+    .imageBox img {
+        width: 4rem;
+        height: 4rem;
+    }
+    .imageBox p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skillImages {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skillImages {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 385px) {
+    .skillImages {
+        grid-template-columns: repeat(2, 1fr); /* Ensuring 2 items per row */
+        gap: 1.5rem;
+    }
+    .imageBox {
+        width: 5rem; /* Reduce size */
+        height: 7rem;
+    }
+    .imageBox img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .imageBox p {
+        font-size: 0.8rem; /* Reduce text size */
+    }
+}
+

@@ -1,0 +1,31 @@
+.cardBox{
+    display: flex;
+    height: 35rem;
+    width: 20rem;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    border-color: white;
+    border-width:0.1rem ;
+    background-color: rgba(194, 186, 186, 0.2);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cardBox img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10rem;
+}
+
+.cardBox h3{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cardBox p{
+    color: white;
+    font: 1rem;
+    padding: 0rem 1rem;
+}

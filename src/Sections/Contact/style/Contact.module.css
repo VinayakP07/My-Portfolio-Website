@@ -1,0 +1,37 @@
+
+.contactBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.contactBox h2{
+    color: white;
+    font-size: 4rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5rem;
+}
+
+.socialBox{
+    display: flex;
+    justify-content: space-around;
+    gap: 20rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+.formBox{
+    margin-top: 7rem;
+}
+
+.formBox button{
+    background: linear-gradient(45deg, #7da4ec, #2a5298);
+    width: 10rem;
+    height: 3rem;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
