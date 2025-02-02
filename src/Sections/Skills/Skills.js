@@ -75,7 +75,7 @@ const Skills = () => {
                     </div>
                 </Link>
 
-                <Link to="https://developer.mozilla.org/en-US/docs/Glossary/Java" target='_blank'>
+                <Link to="https://docs.python.org/3/" target='_blank'>
                     <div className={`${styles.imageBox}`}>
                         <img className={`${styles.javaLogo}`} src="https://i.postimg.cc/B6WgPfkN/pngwing-com-14.png" alt="" />
                         <p>Python</p>

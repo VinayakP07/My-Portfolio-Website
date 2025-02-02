@@ -1,31 +1,108 @@
-.cardBox{
+.cardBox {
     display: flex;
     height: 35rem;
     width: 20rem;
     flex-direction: column;
     border-radius: 0.8rem;
-    border-color: white;
-    border-width:0.1rem ;
+    border: 0.1rem solid white;
     background-color: rgba(194, 186, 186, 0.2);
     backdrop-filter: blur(5px);
     align-items: center;
     justify-content: space-around;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
-.cardBox img{
+/* Image styling */
+.cardBox img {
     width: 12rem;
     height: 12rem;
-    border-radius: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
 }
 
-.cardBox h3{
+/* Heading */
+.cardBox h3 {
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
+    text-align: center;
+    transition: font-size 0.3s ease-in-out;
 }
 
-.cardBox p{
+/* Paragraph */
+.cardBox p {
     color: white;
-    font: 1rem;
+    font-size: 1rem;
     padding: 0rem 1rem;
+    text-align: center;
+    transition: font-size 0.3s ease-in-out;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .cardBox {
+        height: 30rem;
+        width: 18rem;
+    }
+    
+    .cardBox img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .cardBox h3 {
+        font-size: 1rem;
+    }
+
+    .cardBox p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .cardBox {
+        height: 25rem;
+        width: 16rem;
+        padding: 0.8rem;
+    }
+
+    .cardBox img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .cardBox h3 {
+        font-size: 0.9rem;
+    }
+
+    .cardBox p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 550px) {
+    .cardBox {
+        height: 22rem;
+        width: 14rem;
+        padding: 0.6rem;
+    }
+
+    .cardBox img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .cardBox h3 {
+        font-size: 0.8rem;
+    }
+
+    .cardBox p {
+        font-size: 0.7rem;
+    }
 }

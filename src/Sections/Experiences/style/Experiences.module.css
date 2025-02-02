@@ -9,7 +9,7 @@
     color: white;
     font-size: 4rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .cardBox{
@@ -17,6 +17,36 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20rem;
-    row-gap: 10rem;
+    /* row-gap: 5rem; */
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .cardBox{
+        gap: 13rem;
+    }
+    .expBox h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardBox{
+        gap: 5rem;
+    }
+    .expBox h1{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .cardBox{
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expBox h1{
+        font-size: 2.4rem;
+    }
 }

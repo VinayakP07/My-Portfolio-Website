@@ -5,7 +5,7 @@ import ExperienceCard from "../../Components/ExperienceCard/ExperienceCard";
 const Experiences = () => {
   return (
     <>
-      <div className={`${styles.expBox}`}>
+      <div className={`${styles.expBox}`}> 
         <h1>My Experiences</h1>
         <div className={styles.cardBox}>
           <ExperienceCard
