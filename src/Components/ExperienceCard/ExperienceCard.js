@@ -9,7 +9,7 @@ const ExperienceCard = (props) => {
   return (
     <>
         <div className={`${styles.cardBox}`}>
-            <img src={img} alt="image" />
+            <img src={img} alt="image" /> 
             <h3>{heading}</h3>
             <p>{desc}</p>
         </div>
