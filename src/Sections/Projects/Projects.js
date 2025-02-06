@@ -15,7 +15,7 @@ const Projects = () => {
 
               <ProjectCard img="https://i.ibb.co/68QwNch/2758e5f22b481b8bd95a93bd9f8a820e.png" heading="iNoteBook - Online Notes Storage" desc="Developed a secure cloud-based web application for storing notes, ideas, and to-do tasks, allowing users to add, update, and delete notes with ease. Implemented global accessibility to enable users to access their notes from anywhere at any time, and ensured high-level security to protect user data and account information." gitf={1} gitb={1} gitfLink="https://github.com/VinayakP07/iNoteBook-Frontend" gitbLink="https://github.com/VinayakP07/iNoteBook-Backend"  />
 
-              <ProjectCard img="https://i.ibb.co/NxFxwfn/images.jpg" heading="Daily News - Get Latest New Update" desc="A web application that fetches APIs to deliver daily news updates across 5+ categories, including sports, technology, and health. The app provide real-time updates and automatically refreshing news content every 24 hours to ensure the latest information is available." git1={1} gitLink="https://github.com/VinayakP07/DailyNews-News-App" />
+              <ProjectCard img="https://i.ibb.co/NxFxwfn/images.jpg" heading="Daily News - Get Latest News Update" desc="A web application that fetches APIs to deliver daily news updates across 5+ categories, including sports, technology, and health. The app provide real-time updates and automatically refreshing news content every 24 hours to ensure the latest information is available." git1={1} gitLink="https://github.com/VinayakP07/DailyNews-News-App" />
             </div>
         </div>
     </>

@@ -1,33 +1,34 @@
 .projectCardBox {
-    width: 100%;
-    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     border-radius: 0.8rem;
-    border-color: white;
-    border-width: 0.2rem;
+    border: 2px solid white;
     background-color: rgba(194, 186, 186, 0.2);
     backdrop-filter: blur(5px);
-    flex-wrap: wrap;
     overflow: hidden;
 }
 
-.projectCardBox img {
-    width: 100%;
+/* Image container to ensure full width on smaller screens */
+.imageContainer {
+    flex: 1;
     max-width: 20rem;
-    height: auto;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-top-left-radius: 0.8rem;
-    border-bottom-left-radius: 0.8rem;
-    border-right: white 0.2rem solid;
 }
 
 .projectCardContent {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 1rem;
     color: white;
-    flex: 1;
 }
 
 .projectCardContent h3 {
@@ -49,7 +50,6 @@
 
 .cardButton button {
     background-color: rgba(21, 139, 236, 0.873);
-    backdrop-filter: blur(5px);
     width: 100%;
     padding: 0.5rem;
     max-width: 17rem;
@@ -66,79 +66,49 @@
     background-color: rgba(21, 139, 236, 1);
     transform: translateY(-3px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.1);
 }
 
-/* Media Queries */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .projectCardBox {
         flex-direction: column;
         align-items: center;
     }
 
-    .projectCardBox img {
+    .imageContainer {
         width: 100%;
-        height: auto;
+        max-width: none;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: 15rem;
         object-fit: cover;
+        object-position: center;
         border-radius: 0.8rem 0.8rem 0 0;
     }
 
     .projectCardContent {
-        margin-left: 0;
-        margin-right: 0;
-        align-items: center;
         text-align: center;
-    }
-
-    .projectCardContent h3 {
-        font-size: 1.25rem;
-    }
-
-    .projectCardContent p {
-        font-size: 1rem;
+        width: 100%;
     }
 
     .cardButton {
         justify-content: center;
         width: 100%;
     }
-
-    .cardButton button {
-        width: 100%;
-        max-width: 15rem;
-        font-size: 0.9rem;
-    }
-    
-    .cardButton button:hover {
-        background-color: rgba(21, 139, 236, 1);
-        transform: translateY(-3px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        filter: brightness(1.1);
-    }
 }
 
 @media (max-width: 480px) {
     .projectCardContent h3 {
-        font-size: 1rem;
-    }
-
-    .projectCardBox img {
-        border-top-left-radius: 0.8rem;
-        border-right: white 0rem solid;
+        font-size: 1.2rem;
     }
 
     .projectCardContent p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .cardButton button {
         font-size: 0.9rem;
-    }
-    
-    .cardButton button:hover {
-        background-color: rgba(21, 139, 236, 1);
-        transform: translateY(-3px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        filter: brightness(1.1);
     }
 }
