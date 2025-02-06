@@ -39,19 +39,21 @@
 
 
 
-body{
+body {
   inset: 0px;
   z-index: -10;
-  height: 100%;
+  min-height: 100vh; /* Ensure body covers the full viewport */
   width: 100%;
-  background: radial-gradient(125% 125% at 50% 10%,#000 40%,#63e 100%);
+  background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
   align-items: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 @media (max-width: 1050px) {
   html, body {
-    height: 200%;
+    min-height: 100vh; /* Ensure body always covers full viewport */
+    height: auto;
   }
 
   body {

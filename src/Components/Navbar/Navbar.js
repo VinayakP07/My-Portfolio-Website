@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import styles from './style/Navbar.module.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './style/Navbar.module.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-  }
+  };
 
   const handleClickOutside = (e) => {
     if (e.target.closest(`.${styles.navBox}`)) return;
@@ -28,8 +28,13 @@ const Navbar = () => {
     <>
       <div className={`${styles.navBox}`}>
         <Link to="/">
-          <img className={`${styles.logo}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7owKF3ZR9KjQZc13gRZjVzkzRQ5tRwxDN9A&s" alt="" />
+          <img className={`${styles.logo}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7owKF3ZR9KjQZc13gRZjVzkzRQ5tRwxDN9A&s" alt="Logo" />
         </Link>
+        
+        {/* Download CV Button */}
+        <a href="https://drive.google.com/file/d/1rmXWmHhwZZ8A1aRwLDV8IelUVBf1O2cj/view?usp=drive_link" target='_blank' download className={styles.downloadBtn}>
+          Download CV
+        </a>
 
         <div className={`${styles.hamburger}`} onClick={toggleMenu}>
           <div className={`${styles.bar}`}></div>
@@ -46,7 +51,7 @@ const Navbar = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
