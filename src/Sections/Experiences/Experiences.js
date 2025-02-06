@@ -20,7 +20,7 @@ const Experiences = () => {
           />
           <ExperienceCard
             img="https://i.ibb.co/mhvpWHn/fedkiit-logo.jpg"
-            heading="Technical Executive"
+            heading="Senior Technical Executive"
             desc="As a Technical Executive at FED-KIIT, I am responsible for overseeing the management and maintenance of the official FED-KIIT website. This site is fully deployed and accessible globally, ensuring a seamless user experience. Additionally, I have served as an Organizing Committee Member for multiple events, contributing to their successful execution."
           />
           <ExperienceCard
