@@ -20,3 +20,21 @@
     width: 80%;
     align-items: center;
 }
+
+@media (max-width: 1024px) {
+    .projectBox h2{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 840px) {
+    .projectBox h2{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectBox h2{
+        font-size: 2.4rem;
+    }
+}

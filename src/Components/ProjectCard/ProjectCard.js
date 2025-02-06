@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
   return (
     <>
         <div className={`${styles.projectCardBox}`}>
-            <img src={img} alt="Image" />
+                <img src={img} alt="Image" />
             <div className={`${styles.projectCardContent}`}>
                 <h3>{heading}</h3>
                 <p>{desc}</p>

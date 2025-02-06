@@ -16,23 +16,23 @@
     margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 20rem;
+    gap: 10rem;
     /* row-gap: 5rem; */
     justify-content: center;
 }
 
 @media (max-width: 1024px) {
     .cardBox{
-        gap: 13rem;
+        gap: 6rem;
     }
     .expBox h1{
         font-size: 3rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     .cardBox{
-        gap: 5rem;
+        gap: 3rem;
     }
     .expBox h1{
         font-size: 2.8rem;
