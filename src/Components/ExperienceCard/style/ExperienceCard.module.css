@@ -1,7 +1,7 @@
 .cardBox {
     display: flex;
     height: 35rem;
-    width: 20rem;
+    width: 30rem;
     flex-direction: column;
     border-radius: 0.8rem;
     border: 0.1rem solid white;
@@ -46,7 +46,7 @@
 @media (max-width: 1024px) {
     .cardBox {
         height: 30rem;
-        width: 18rem;
+        width: 23rem;
     }
     
     .cardBox img {
@@ -64,7 +64,7 @@
 }
 
 /* Small screens (mobile devices) */
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     .cardBox {
         height: 25rem;
         width: 16rem;
