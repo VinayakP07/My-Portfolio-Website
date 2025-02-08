@@ -4,7 +4,7 @@ import styles from './style/Hero.module.css';
 const Hero = () => {
   const headings = [
     "Full Stack Web Developer",
-    "Sr. Tech Executive at FED KIIT",
+    "Senior Technical Executive at FED KIIT",
     "Marketing Executive at KRS"
   ];
 

@@ -1,3 +1,15 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Project Card Container */
 .projectCardBox {
     display: flex;
     flex-wrap: wrap;
@@ -7,21 +19,48 @@
     background-color: rgba(194, 186, 186, 0.2);
     backdrop-filter: blur(5px);
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Image container to ensure full width on smaller screens */
+/* Staggered Animation for Multiple Cards */
+.projectCardBox:nth-child(1) { animation-delay: 0.2s; }
+.projectCardBox:nth-child(2) { animation-delay: 0.4s; }
+.projectCardBox:nth-child(3) { animation-delay: 0.6s; }
+.projectCardBox:nth-child(4) { animation-delay: 0.8s; }
+
+/* Hover Effect - Slight Pop */
+.projectCardBox:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Image Container */
 .imageContainer {
     flex: 1;
     max-width: 20rem;
     overflow: hidden;
+    position: relative;
 }
 
+/* Image Animation */
 .imageContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/* Image Hover Effect */
+.imageContainer:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Content Styling */
 .projectCardContent {
     flex: 1;
     display: flex;
@@ -29,25 +68,36 @@
     justify-content: space-around;
     padding: 1rem;
     color: white;
+    text-align: left;
 }
 
+/* Heading Animation */
 .projectCardContent h3 {
     font-size: 1.5rem;
     font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards 0.5s;
 }
 
+/* Description Animation */
 .projectCardContent p {
     font-size: 1.05rem;
     font-weight: 600;
     margin: 1rem 0rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards 0.7s;
 }
 
+/* Button Container */
 .cardButton {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
+/* Button Animation & Hover Effects */
 .cardButton button {
     background-color: rgba(21, 139, 236, 0.873);
     width: 100%;
@@ -60,15 +110,21 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards 0.9s;
 }
 
+/* Button Hover Effect */
 .cardButton button:hover {
     background-color: rgba(21, 139, 236, 1);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(21, 139, 236, 0.5);
 }
 
-/* Responsive Styles */
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Medium screens (tablets) */
 @media (max-width: 768px) {
     .projectCardBox {
         flex-direction: column;
@@ -99,6 +155,7 @@
     }
 }
 
+/* Small screens (mobile devices) */
 @media (max-width: 480px) {
     .projectCardContent h3 {
         font-size: 1.2rem;
