@@ -4,6 +4,40 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
 .heroBox {
   display: flex;
   justify-content: center;
@@ -14,12 +48,17 @@
   z-index: 1;
   position: relative;
   gap: 2rem;
+  animation: fadeInUp 1s ease-in-out;
+  margin-top: 2rem;
 }
 
 .heroContent {
   color: white;
   max-width: 40rem;
   text-align: left;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .heroContent h1 {
@@ -62,21 +101,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 /* Circular Blurred Background for Image */
 .heroImageBox {
-  width: 30rem; /* Adjust size */
+  width: 30rem;
   height: 30rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparent effect */
-  backdrop-filter: blur(10px); /* Adds blur effect */
-  border-radius: 50%; /* Makes it circular */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hides anything outside the circle */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: glowing 3s infinite ease-in-out;
 }
 
 /* Ensuring the image fits inside the circle */
