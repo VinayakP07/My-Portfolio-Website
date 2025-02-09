@@ -26,7 +26,7 @@ const Skills = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 } // Adjust for when animation triggers
+      { threshold: 0.3 }
     );
 
     if (skillRef.current) {

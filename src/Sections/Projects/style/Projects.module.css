@@ -9,7 +9,6 @@
     }
 }
 
-/* Apply fade-in animation on load */
 .projectBox {
     display: flex;
     flex-direction: column;
@@ -17,10 +16,9 @@
     margin-top: 7rem;
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 1s ease-out forwards;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Title Animation */
 .projectBox h2 {
     color: white;
     margin-top: 7rem;
@@ -28,10 +26,19 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards 0.3s;
+    transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
 }
 
-/* Project Cards Container */
+.projectBox.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectBox.visible h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .projectCardBox {
     display: flex;
     flex-direction: column;
@@ -39,45 +46,45 @@
     padding-top: 5rem;
     width: 80%;
     align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Project Card Animation */
+.projectBox.visible .projectCardBox {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .projectCardBox > * {
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeInUp 1s ease-out forwards;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Staggered animation for each project card */
-.projectCardBox > *:nth-child(1) { animation-delay: 0.3s; }
-.projectCardBox > *:nth-child(2) { animation-delay: 0.5s; }
-.projectCardBox > *:nth-child(3) { animation-delay: 0.7s; }
-.projectCardBox > *:nth-child(4) { animation-delay: 0.9s; }
+.projectBox.visible .projectCardBox > *:nth-child(1) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.projectBox.visible .projectCardBox > *:nth-child(2) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.projectBox.visible .projectCardBox > *:nth-child(3) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+.projectBox.visible .projectCardBox > *:nth-child(4) { transition-delay: 0.9s; opacity: 1; transform: translateY(0); }
 
-/* Hover Effect for Project Cards */
 .projectCardBox > *:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease-in-out;
 }
 
-/* ---------- RESPONSIVENESS ---------- */
-
-/* Medium screens (tablets) */
 @media (max-width: 1024px) {
     .projectBox h2 {
         font-size: 3rem;
     }
 }
 
-/* Small screens (mobile devices) */
 @media (max-width: 840px) {
     .projectBox h2 {
         font-size: 2.8rem;
     }
 }
 
-/* Extra small screens (very small mobile devices) */
 @media (max-width: 480px) {
     .projectBox h2 {
         font-size: 2.4rem;

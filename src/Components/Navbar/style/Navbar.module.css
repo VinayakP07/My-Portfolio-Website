@@ -7,11 +7,9 @@
   position: sticky;
   z-index: 100;
   backdrop-filter: blur(2rem);
-  /* padding: 1rem 2rem; */
   transition: all 0.3s ease-in-out;
 }
 
-/* Logo */
 .logo {
   width: 7rem;
   height: 6rem;
@@ -22,7 +20,6 @@
   transform: scale(1.1);
 }
 
-/* Navigation Links */
 .list {
   display: flex;
   align-items: center;
@@ -41,7 +38,6 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* Animated Underline */
 .list a::after {
   content: "";
   position: absolute;
@@ -62,7 +58,6 @@
   color: gold;
 }
 
-/* Download CV Button */
 .downloadBtn {
   background-color: gold;
   color: black;
@@ -80,7 +75,6 @@
   transform: scale(1.05);
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -98,7 +92,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Hamburger Animation */
 .hamburger.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -111,7 +104,6 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Menu */
 @media (max-width: 900px) {
   .list {
       display: flex;

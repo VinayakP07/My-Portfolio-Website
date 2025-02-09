@@ -9,7 +9,6 @@
     }
 }
 
-/* Apply animation on load */
 .cardBox {
     display: flex;
     height: 30rem;
@@ -25,24 +24,26 @@
     transition: all 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(30px);
+}
+
+.cardBox.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
     animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Staggered animation for each card */
-.cardBox:nth-child(1) { animation-delay: 0.2s; }
-.cardBox:nth-child(2) { animation-delay: 0.4s; }
-.cardBox:nth-child(3) { animation-delay: 0.6s; }
-.cardBox:nth-child(4) { animation-delay: 0.8s; }
-.cardBox:nth-child(5) { animation-delay: 1s; }
+.cardBox.fadeInUp:nth-child(1) { animation-delay: 0.2s; }
+.cardBox.fadeInUp:nth-child(2) { animation-delay: 0.4s; }
+.cardBox.fadeInUp:nth-child(3) { animation-delay: 0.6s; }
+.cardBox.fadeInUp:nth-child(4) { animation-delay: 0.8s; }
+.cardBox.fadeInUp:nth-child(5) { animation-delay: 1s; }
 
-/* Hover Effects */
 .cardBox:hover {
-    transform: scale(1.05); /* Slight scale-up */
+    transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Subtle glowing effect */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Image styling */
 .cardBox img {
     width: 12rem;
     height: 12rem;
@@ -51,13 +52,11 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Image hover effect */
 .cardBox:hover img {
-    transform: scale(1.1); /* Slight zoom-in */
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4); /* Glow effect */
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
-/* Heading */
 .cardBox h3 {
     color: white;
     font-size: 1.1rem;
@@ -66,7 +65,6 @@
     transition: font-size 0.3s ease-in-out;
 }
 
-/* Paragraph */
 .cardBox p {
     color: white;
     font-size: 1rem;
@@ -75,9 +73,6 @@
     transition: font-size 0.3s ease-in-out;
 }
 
-/* ---------- RESPONSIVENESS ---------- */
-
-/* Medium screens (tablets) */
 @media (max-width: 1024px) {
     .cardBox {
         height: 30rem;
@@ -98,7 +93,6 @@
     }
 }
 
-/* Small screens (mobile devices) */
 @media (max-width: 840px) {
     .cardBox {
         height: 25rem;
@@ -120,7 +114,6 @@
     }
 }
 
-/* Extra small screens (very small mobile devices) */
 @media (max-width: 550px) {
     .cardBox {
         height: 22rem;
