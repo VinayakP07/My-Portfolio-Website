@@ -34,14 +34,12 @@
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* When visible, apply animations */
 .imageBox.active {
     opacity: 1;
     transform: translateY(0);
     animation: float 3s ease-in-out infinite;
 }
 
-/* Staggered animation delays */
 .imageBox.active:nth-child(1) { transition-delay: 0.2s; }
 .imageBox.active:nth-child(2) { transition-delay: 0.4s; }
 .imageBox.active:nth-child(3) { transition-delay: 0.6s; }
@@ -53,7 +51,6 @@
 .imageBox.active:nth-child(9) { transition-delay: 1.8s; }
 .imageBox.active:nth-child(10) { transition-delay: 2s; }
 
-/* Hover Effect */
 .imageBox:hover {
     transform: scale(1.1) rotate(5deg);
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -72,7 +69,6 @@
     margin-bottom: 5rem;
 }
 
-/* Skill Image Sizes */
 .mongoLogo, .expressLogo, .cLogo, .htmlLogo, .reactLogo, .nodeLogo, .cssLogo, .jsLogo {
     width: 5rem;
     height: 5rem;
@@ -87,7 +83,6 @@
     color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .skillImages { gap: 5rem; }
     .imageBox { width: 6rem; height: 8rem; }

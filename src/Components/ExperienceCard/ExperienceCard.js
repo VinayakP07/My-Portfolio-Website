@@ -1,20 +1,41 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
-import styles from './style/ExperienceCard.module.css'
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./style/ExperienceCard.module.css";
 
-const ExperienceCard = (props) => {
+const ExperienceCard = ({ img, heading, desc }) => {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-    const {img, heading, desc} = props;
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <>
-        <div className={`${styles.cardBox}`}>
-            <img src={img} alt="image" /> 
-            <h3>{heading}</h3>
-            <p>{desc}</p>
-        </div>
-    </>
-  )
-}
+    <div
+      ref={cardRef}
+      className={`${styles.cardBox} ${isVisible ? styles.fadeInUp : ""}`}
+    >
+      <img src={img} alt="experience image" />
+      <h3>{heading}</h3>
+      <p>{desc}</p>
+    </div>
+  );
+};
 
-export default ExperienceCard
+export default ExperienceCard;

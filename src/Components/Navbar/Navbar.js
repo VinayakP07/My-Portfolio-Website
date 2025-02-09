@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './style/Navbar.module.css';
@@ -31,7 +30,6 @@ const Navbar = () => {
           <img className={`${styles.logo}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7owKF3ZR9KjQZc13gRZjVzkzRQ5tRwxDN9A&s" alt="Logo" />
         </Link>
         
-        {/* Download CV Button */}
         <a href="https://drive.google.com/file/d/1rmXWmHhwZZ8A1aRwLDV8IelUVBf1O2cj/view?usp=drive_link" target='_blank' download className={styles.downloadBtn}>
           Download CV
         </a>
